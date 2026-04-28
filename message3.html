@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A small reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="WhatsApp Image 2026-04-19 at 6.00.00 PM (3).jpeg" alt="Memory" class="memory-image">
+        </div>
+        <h1>A small reminder</h1>
+        <div class="message-text">
+            <p>Helloo Marroumm i want you to know that i love you so much and i will always be here for you i know what
+                this day means for you and i know that it is hard for you but i want you to know that you are not alone in this i am here for you no matter what </p>
+            <p>Personally Maram i really admire your strength and your kindness and im not only sure that your grandpa is proud of who you became today </p>
+            
+        </div>
+        
+        <div class="btn-col">
+            <button onclick="showModal()">Click if you're having a hard day</button>
+            <a href="final.html" class="btn">One last thing</a>
+            <a href="choice.html" class="btn" style="font-size: 0.9em; opacity: 0.7; border: none;">Go back</a>
+        </div>
+    </div>
+
+    <!-- The soothing popup overlay -->
+    <div class="modal-overlay" id="comfort-modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <p>Ysir li ysir maram mellekher w 3allekher dima bech tal9ani m3ak whatever the hell happens<p>
+
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

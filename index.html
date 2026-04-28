@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Small Gift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="WhatsApp Image 2026-04-19 at 5.59.59 PM.jpeg" alt="Memory" class="memory-image">
+        </div>
+        <h1>A small gift for you.</h1>
+        <p>Only you can open it.</p>
+        
+        <p class="hidden" id="error-msg">That doesn't seem right... Take your time.</p>
+        
+        <div>
+            <!-- Using text instead of password type so they can see what they type if preferred, 
+                 but keeping it as password adds that "padlocked" gift feel. -->
+            <input type="password" id="pwd" placeholder="Enter your birthday (DDMM)">
+        </div>
+        <div>
+            <button onclick="checkPassword()">Open</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

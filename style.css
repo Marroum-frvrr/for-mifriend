@@ -1,0 +1,217 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* --- Base & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Soft dark night sky gradient */
+    background: linear-gradient(135deg, #0b101e 0%, #1a233a 100%);
+    color: #eaeaea; /* Soft off-white for emotional, gentle reading */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Subtle fade in when pages load */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Background "Stars" effect via radial-gradient for a simple, code-only starry night */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.3; /* Keep it subtle */
+    z-index: -1; /* Keep it behind text */
+}
+
+/* --- Layout --- */
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    /* Subtle glass-like container, very gentle */
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8; /* Generous line height for breathing room */
+    margin-bottom: 30px;
+    color: #d1d5df;
+}
+
+.message-text {
+    font-size: 1.15rem;
+    text-align: left; /* Reading long text is often better left-aligned */
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+}
+
+/* --- Inputs & Buttons --- */
+input[type="password"],
+input[type="text"] {
+    width: 250px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+button, .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: transparent;
+    color: #eaeaea;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    /* Soft glow */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Images --- */
+.image-wrapper {
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.memory-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.memory-image:hover {
+    opacity: 1;
+}
+
+/* --- Utilities & Specific Elements --- */
+.hidden {
+    display: none !important;
+}
+
+#error-msg {
+    color: #ffb3b3;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+#rejection-msg {
+    margin-top: 20px;
+    font-style: italic;
+    color: #a0a5b5;
+}
+
+/* --- Modal Overlay for Comforting Messages --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Gentle entry */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #1a233a;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

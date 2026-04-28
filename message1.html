@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something to remember</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="WhatsApp Image 2026-04-19 at 6.00.00 PM (1).jpeg" alt="Memory" class="memory-image">
+        </div>
+        <h1>Something I want you to remember</h1>
+        <div class="message-text">
+            <p>Three years ago, you lost someone who meant the absolute world to you.</p>
+            <p>It is okay to still miss him. It is okay if the world still feels a little hollow sometimes.
+                 The love you had for your grandfather doesn't disappear just because time passes.</p>
+            <p>He is still a part of who you are. Every kind thing you do, every time you are strong,
+                 you carry a piece of him with you.</p>
+        </div>
+        
+        <div class="btn-col">
+            <button onclick="showModal()">Click if you're having a hard day</button>
+
+            <a href="choice.html" class="btn" style="font-size: 0.9em; opacity: 0.7; border: none;">Go back</a>
+        </div>
+    </div>
+
+    <!-- The soothing popup overlay -->
+    <div class="modal-overlay" id="comfort-modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <p>Take a deep breath.</p>
+            <p>You have survived 100% of your hardest days so far. I am so deeply proud of the person you are becoming.</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
