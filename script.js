@@ -8,7 +8,7 @@ function checkPassword() {
     const errorMsg = document.getElementById('error-msg');
     
     // Replace '1508' with her actual birthday (e.g., 15 for day, 08 for August)
-    const CORRECT_PASSWORD = "1508"; 
+    const CORRECT_PASSWORD = "0608"; 
 
     if (pwdInput === CORRECT_PASSWORD) {
         // Redirect to the confirmation page
