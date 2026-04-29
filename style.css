@@ -169,7 +169,7 @@ button:hover, .btn:hover {
     opacity: 0.8;
 }
 .flip-horizontal {
-  transform: scaleX(-1);
+  transform: rotate(90deg);
 }
 #rejection-msg {
     margin-top: 20px;
