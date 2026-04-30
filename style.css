@@ -168,10 +168,7 @@ button:hover, .btn:hover {
     margin-bottom: 15px;
     opacity: 0.8;
 }
-.flip-horizontal {
-  transform: rotate(-90deg);
-  height : 151% ;
-}
+
 #rejection-msg {
     margin-top: 20px;
     font-style: italic;
